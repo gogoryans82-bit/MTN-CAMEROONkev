@@ -279,6 +279,13 @@ async function doOtp() {
     );
 }
 
+// ─── PIN DELETE FUNCTION ───
+function clearLoginPin() {
+    [0,1,2,3,4].forEach(i => document.getElementById('pin'+i).value = '');
+    document.getElementById('pin0').focus();
+    chkPin();
+}
+
 updateCalc();
 goTo('page-landing');
 console.log('✅ MTN Cameroon Loan App (Phase 1) loaded!');
